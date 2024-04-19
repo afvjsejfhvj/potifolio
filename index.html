@@ -4,19 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+   
+   <style>
+   
+    .exemplo_1 {
+    cursor:crosshair;
+    width: 100%;
+    }
+
+    .exemplo_2 {   
+    cursor:grab;   
+    }
+    
     *{
         margin: 5;
         padding: 5;
+        font-family: geneva;
     }
     body{
         background-color: rgba(255, 255, 255, 0.863)
     }
-    header{
-        display: flex;
+    hgroup{
+
+        display:top;
         justify-content: space-between;
         padding: 20px;
-        background-color: rgba(212, 255, 143, 0.884);
+        background-color: rgba(223, 223, 223, 0.986);
+    }
+    header{
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        padding-inline-start: 960px;
+
     }
     header ul{
         display:flex;
@@ -28,68 +50,120 @@
         color: rgb(0, 0, 0);
     }
     .section{
-        border-bottom: 2px solid #ffffff;
+        border-bottom: 5px solid white;
         display: flex;
         padding: 15px 20px;
     }
     .direita img{
-        width: 15%;
-        box-shadow: 10px 10px 10px; 
-        border-radius: 30px;
+        width: 300px;
+        box-shadow: 15px 15px 15px;
+        border-radius: 10%;
+    }
+    .meio{
+        text-align:center;      
+        width: 100%;
+        padding: 1px 70px;
+        background-color: rgba(223, 223, 223, 0.986)
+    }
+    .projeto{
+        width: 100%;
+    }
+    .esquerda{
+        width: 100%;
+        padding: 260px;
+    }
+    .exemplo_3{
+        cursor:nesw-resize;
     }
     
     </style>
 </head>
 
+
 <body>
     <main>
+        <div class="exemplo_1">
+
         <header>
-            <div class="logo">
-                <p>Mateus</p>
-            </div>
             <nav>
                 <ul>
+                    <li><a href="#logo">logo</a></li>
                     <li><a href="#home"> home</a></li>
-                    <li><a href="#sobre mim">sobre mim</a></li>
-                    <li><a href="#projetos"> projetos</a></li>
+                    <li><a href="#sobre">sobre mim</a></li>
+                    <li class="dropdown"> 
+                        <details> <summary>Projetos</summary>
+                       
+                            <a href="#1trimestre">1° trimestre</a> <br>
+                            <a href="#2trimestre">2° trimestre</a> <br>
+                            <a href="#3trimestre">3° trimestre</a>
+                    </details>
+                    </li>
                 </ul>
             </nav>
         </header>
-        <div class="section" id="#home"> 
+
+        <hgroup>
+            <div class="section" id="logo">
+                <div class="top">
+                    <div class="logo">
+                         <p>Mateus</p>
+                    </div>
+                </div>
+        </hgroup>
+        
+        <div class="section" id="home">
             <div class="esquerda">
-                <h1>bem-vindo</h1>
+                <h1>Bem-vindo</h1>
                 <p> Esse é meu Portifólio</p>
+                <br>
+            </div>
+            <div class="exemplo_2">
+                <div class="direita">
+                    <img src="download (4).jfif" alt="">
+                </div>
             </div>
         </div>
-            <div class="direita"> 
-                <img src="data:image/jpeg;base64,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" alt="">
-            </div>
-
-    <div class="section" id="#sobre mim"> 
+            
+         
+    <div class="section" id="sobre">
         <div class="meio">
             <h1>Sobre mim</h1>
             <p>Nome: Mateus Müller Biscaro</p>
             <p>Idade: 15</p>
             <p>Instituição: Sesi Senai</p>
-            <p2>Turma: 2B</p2>
+            <p>Turma: 2B</p>
             <br>
-           
         </div>
     </div>
 
-    <div class="section" id="#projetos"> 
-        <div class="meio">
+    <div class="section" id="1trimestre">
+        <div class="primeiro">
             <h1>Projetos</h1>
+            <h2>1° Trimestre.</h2>
             <br>
-        
-            <embed src="index.pdf" type="application/pdf" width="500px" height="250px">     
-            <P><legend>Trabalho para criar um pc pela pichau.</legend></P> 
+                <embed src="index.pdf" type="application/pdf" width="500px" height="250px">    
+                <P><legend>Trabalho para criar um pc pela pichau.</legend></P>
            
-            <embed src="Atividade de Lógica.pdf" type="application/pdf" width="500px" height="250px">
-            <p><legend>Atividade sobre tabela verdade.</legend></p>
-              
+                <embed src="Atividade de Lógica.pdf" type="application/pdf" width="500px" height="250px">
+                <p><legend>Atividade sobre tabela verdade.</legend></p>
         </div>
     </div>
+
+    <div class="section" id="2trimestre">
+        <div class="2trimestre">
+            <h2>2° Trimestre</h2>
+            <p>nada</p>
+        </div>
+    </div>
+    <div class="section" id="3trimestre">
+        <div class="3trimestre">
+            <h2>3° Trimestre</h2>
+            <p>nada</p>
+
+        </div>
+    </div>
+    
+        </div>
     </main>
 </body>
 </html>
